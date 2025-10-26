@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><i class="fa-brands fa-instagram"></i>Instagram</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <form class="d-flex" role="search">
+          <button
+            class="btn btn-outline-success"
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#CreatePostModal"
+          >
+            Create new post
+          </button>
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </nav>
+    <div
+      class="modal fade"
+      id="CreatePostModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">caption</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+            <i class="fa-solid fa-camera"></i>
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+        data-bs-target="#gridView" type="button" role="tab"
+        aria-controls="gridView aria-selected="false" >
+        <i class="fa-solid fa-calendar-days"></i>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+        data-bs-target="#detailView" type="button" role="tab"
+        aria-controls="detailView aria-selected="true" >
+        <i class="fa-solid fa-film"></i>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div
+        id="detailView"
+        class="tab-pane fade"
+        role="tabpanel"
+        aria-labelledby="detail-tab"
+      >
+        <div class="container mt-4">
+          <div class="row">
+            <div class="col align-self-center">
+              <div class="post">
+                <div class="post-header">
+                  <div class="post-user">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"
+                      alt="HTML5 logo"
+                    />
+                    <div>
+                      <h4>HTML5</h4>
+                      <p>rigoberto</p>
+                    </div>
+                  </div>
+                  <div class="post-menu"></div>
+                </div>
+                <div class="post-img">
+                  <img
+                    src="https://images.contentstack.io/v3/assets/blt06f605a34f1194ff/bltc90ef31038ccfa23/6561e055d595493c39b656f8/BCC-2022-MNH-20THINGS-HEADER-1536x1056.webp?format=webp&quality=60&width=1440"
+                    alt="Paisaje"
+                  />
+                </div>
+                <div class="post-icons">
+                  <div class="left">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-comment"></i>
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </div>
+                  <div class="right"><i class="fa-solid fa-share"></i></div>
+                </div>
+                <div class="post-likes">
+                  Liked by <b>Joseph</b>, <b>html5</b>, <b>Web</b> and
+                  <b>100.000 others</b>
+                </div>
+                <div class="post-body">
+                  lorem ipsum dolor sit amet, conssectetur adipiscing elit,sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mt-4">
+          <div class="row">
+            <div class="col align-self-center">
+              <div class="post">
+                <div class="post-header">
+                  <div class="post-user">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"
+                      alt="HTML5 logo"
+                    />
+                    <div>
+                      <h4>Usuario introvertido</h4>
+                      <p>rigoberto</p>
+                    </div>
+                  </div>
+                  <div class="post-menu"></div>
+                </div>
+                <div class="post-img">
+                  <img
+                    src="https://www.celebritycruises.com/blog/content/uploads/2022/08/wildlife-in-patagonia-guanaco-hero-1920x890.jpg"
+                    alt="Paisaje"
+                  />
+                </div>
+                <div class="post-icons">
+                  <div class="left">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-comment"></i>
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </div>
+                  <div class="right"><i class="fa-solid fa-share"></i></div>
+                </div>
+                <div class="post-likes">
+                  Liked by <b>4GeeksAcademy</b>, <b>html5</b>, <b>Web</b> and
+                  <b>100.000 others</b>
+                </div>
+                <div class="post-body">
+                  lorem ipsum dolor sit amet, conssectetur adipiscing elit,sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mt-4">
+          <div class="row">
+            <div class="col align-self-center">
+              <div class="post">
+                <div class="post-header">
+                  <div class="post-user">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"
+                      alt="HTML5 logo"
+                    />
+                    <div>
+                      <h4>HTML5</h4>
+                      <p>rigoberto</p>
+                    </div>
+                  </div>
+                  <div class="post-menu"></div>
+                </div>
+                <div class="post-img">
+                  <img
+                    src="https://travelbeyond.com/wp-content/uploads/2024/01/BaseTowers-1-scaled-e1673548278321.jpg"
+                    alt="Paisaje"
+                  />
+                </div>
+                <div class="post-icons">
+                  <div class="left">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-comment"></i>
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </div>
+                  <div class="right"><i class="fa-solid fa-share"></i></div>
+                </div>
+                <div class="post-likes">
+                  Liked by <b>4GeeksAcademy</b>, <b>El loco yo</b>,
+                  <b>Web</b> and
+                  <b>56.000 others</b>
+                </div>
+                <div class="post-body">awesome place</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mt-4">
+          <div class="row">
+            <div class="col align-self-center">
+              <div class="post">
+                <div class="post-header">
+                  <div class="post-user">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"
+                      alt="HTML5 logo"
+                    />
+                    <div>
+                      <h4>HTML5</h4>
+                      <p>Patagonia images</p>
+                    </div>
+                  </div>
+                  <div class="post-menu"></div>
+                </div>
+                <div class="post-img">
+                  <img
+                    src="https://www.patagoniahero.com/siteblog/wp-content/uploads/2021/01/fiery-autumn-in-los-glaciares-national-park-640x427.jpg"
+                    alt="Paisaje"
+                  />
+                </div>
+                <div class="post-icons">
+                  <div class="left">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-comment"></i>
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </div>
+                  <div class="right"><i class="fa-solid fa-share"></i></div>
+                </div>
+                <div class="post-likes">
+                  Liked by <b>4GeeksAcademy</b>, <b>html5</b>, <b>Web</b> and
+                  <b>670 others</b>
+                </div>
+                <div class="post-body">
+                  lorem ipsum dolor sit amet, conssectetur adipiscing elit,sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mt-4">
+          <div class="row">
+            <div class="col align-self-center">
+              <div class="post">
+                <div class="post-header">
+                  <div class="post-user">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"
+                      alt="HTML5 logo"
+                    />
+                    <div>
+                      <h4>Sabe</h4>
+                      <p>Patagonia 2</p>
+                    </div>
+                  </div>
+                  <div class="post-menu"></div>
+                </div>
+                <div class="post-img">
+                  <img
+                    src="https://www.kuodatravel.com/wp-content/uploads/2023/04/Everything-Yo-Need-To-Know-About-Visiting-Patagonia-For-the-First-Time.jpg"
+                    alt="Paisaje"
+                  />
+                </div>
+                <div class="post-icons">
+                  <div class="left">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-comment"></i>
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </div>
+                  <div class="right"><i class="fa-solid fa-share"></i></div>
+                </div>
+                <div class="post-likes">
+                  Liked by <b>4GeeksAcademy</b>, <b>html5</b>, <b>Web</b> and
+                  <b>100.000 others</b>
+                </div>
+                <div class="post-body">
+                  lorem ipsum dolor sit amet, conssectetur adipiscing elit,sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mt-4">
+          <div class="row">
+            <div class="col align-self-center">
+              <div class="post">
+                <div class="post-header">
+                  <div class="post-user">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"
+                      alt="HTML5 logo"
+                    />
+                    <div>
+                      <h4>HTML5</h4>
+                      <p>rigoberto</p>
+                    </div>
+                  </div>
+                  <div class="post-menu"></div>
+                </div>
+                <div class="post-img">
+                  <img
+                    src="https://www.nationalgeographic.com/content/dam/expeditions/destinations/south-america/active/Patagonia-Hiking-Adventure/Hero-hiking-patagonia-adventure.jpg"
+                    alt="Paisaje"
+                  />
+                </div>
+                <div class="post-icons">
+                  <div class="left">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-comment"></i>
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </div>
+                  <div class="right"><i class="fa-solid fa-share"></i></div>
+                </div>
+                <div class="post-likes">
+                  Liked by <b>4GeeksAcademy</b>, <b>html5</b>, <b>Web</b> and
+                  <b>100.000 others</b>
+                </div>
+                <div class="post-body">
+                  lorem ipsum dolor sit amet, conssectetur adipiscing elit,sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mt-4">
+          <div class="row">
+            <div class="col align-self-center">
+              <div class="post">
+                <div class="post-header">
+                  <div class="post-user">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"
+                      alt="HTML5 logo"
+                    />
+                    <div>
+                      <h4>HTML5</h4>
+                      <p>rigoberto</p>
+                    </div>
+                  </div>
+                  <div class="post-menu"></div>
+                </div>
+                <div class="post-img">
+                  <img
+                    src="https://cdn.britannica.com/26/102126-004-4CB4DC5B/Mount-Fitzroy-Glacier-National-Park-Argentina.jpg"
+                    alt="Paisaje"
+                  />
+                </div>
+                <div class="post-icons">
+                  <div class="left">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-comment"></i>
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </div>
+                  <div class="right"><i class="fa-solid fa-share"></i></div>
+                </div>
+                <div class="post-likes">
+                  Liked by <b>4GeeksAcademy</b>, <b>html5</b>, <b>Web</b> and
+                  <b>100.000 others</b>
+                </div>
+                <div class="post-body">
+                  lorem ipsum dolor sit amet, conssectetur adipiscing elit,sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mt-4">
+          <div class="row">
+            <div class="col align-self-center">
+              <div class="post">
+                <div class="post-header">
+                  <div class="post-user">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"
+                      alt="HTML5 logo"
+                    />
+                    <div>
+                      <h4>HTML5</h4>
+                      <p>rigoberto</p>
+                    </div>
+                  </div>
+                  <div class="post-menu"></div>
+                </div>
+                <div class="post-img">
+                  <img
+                    src="https://explore-live.s3.eu-west-1.amazonaws.com/medialibraries/explore/trip-photos-n-to-q/pa/pa-banner-shutterstock_145939673.jpg?ext=.jpg"
+                    alt="Paisaje"
+                  />
+                </div>
+                <div class="post-icons">
+                  <div class="left">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-comment"></i>
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </div>
+                  <div class="right"><i class="fa-solid fa-share"></i></div>
+                </div>
+                <div class="post-likes">
+                  Liked by <b>4GeeksAcademy</b>, <b>html5</b>, <b>Web</b> and
+                  <b>100.000 others</b>
+                </div>
+                <div class="post-body">
+                  lorem ipsum dolor sit amet, conssectetur adipiscing elit,sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mt-4">
+          <div class="row">
+            <div class="col align-self-center">
+              <div class="post">
+                <div class="post-header">
+                  <div class="post-user">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"
+                      alt="HTML5 logo"
+                    />
+                    <div>
+                      <h4>HTML5</h4>
+                      <p>rigoberto</p>
+                    </div>
+                  </div>
+                  <div class="post-menu"></div>
+                </div>
+                <div class="post-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+                    alt="Paisaje"
+                  />
+                </div>
+                <div class="post-icons">
+                  <div class="left">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-comment"></i>
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </div>
+                  <div class="right"><i class="fa-solid fa-share"></i></div>
+                </div>
+                <div class="post-likes">
+                  Liked by <b>4GeeksAcademy</b>, <b>html5</b>, <b>Web</b> and
+                  <b>100.000 others</b>
+                </div>
+                <div class="post-body">
+                  lorem ipsum dolor sit amet, conssectetur adipiscing elit,sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="gridView"
+        class="tab-pane fade show active"
+        role="tabpanel"
+        aria-labelledby="grid-tab"
+      >
+        <div
+          class="row g-2"
+          style="
+            margin-right: 2px;
+            margin-left: 2px;
+            display: flex;
+            flex-wrap: wrap;
+          "
+        >
+          <div class="col-4">
+            <img
+              src="https://cdn-3.expansion.mx/dims4/default/8db61ae/2147483647/strip/true/crop/1254x836+0+0/resize/1200x800!/format/webp/quality/60/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fd3%2F69%2F8fb59d57487aa7c24443a4d6104c%2Fciudades-mas-caras-para-viajar-en-el-mundo-2022.jpg"
+              style="width: 100%; height: 200px; object-fit: cover"
+              alt="post image"
+            />
+          </div>
+          <div class="col-4">
+            <img
+              src="https://media.gq.com.mx/photos/68a36315eb02e01a15ddf6da/16:9/w_2560%2Cc_limit/Ciudad_de_Bangkok_Tailandia%2520(1).jpg"
+              style="width: 100%; height: 200px; object-fit: cover"
+              alt="post image"
+            />
+          </div>
+          <div class="col-4">
+            <img
+              src="https://i0.wp.com/foodandpleasure.com/wp-content/uploads/2022/11/ciudades-cerca-cdmx-shutterstock-puebla-2.jpg?fit=1280%2C853&ssl=1"
+              style="width: 100%; height: 200px; object-fit: cover"
+              alt="post image"
+            />
+          </div>
+          <div class="col-4">
+            <img
+              src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/rockcms/2024-06/Ciudades-mas-caras-EE-8df4fa.jpg"
+              style="width: 100%; height: 200px; object-fit: cover"
+              alt="post image"
+            />
+          </div>
+          <div class="col-4">
+            <img
+              src="https://humanidades.com/wp-content/uploads/2017/03/ciudad-3-e1565900111723.jpg"
+              style="width: 100%; height: 200px; object-fit: cover"
+              alt="post image"
+            />
+          </div>
+          <div class="col-4">
+            <img
+              src="https://media.cnn.com/api/v1/images/stellar/prod/cnne-625744-190312180104-time-out-most-exciting-city-2019-ny-credit-micha-ludwiczak-1-super-tease.jpg?c=16x9&q=h_833,w_1480,c_fill"
+              style="width: 100%; height: 200px; object-fit: cover"
+              alt="post image"
+            />
+          </div>
+          <div class="col-4">
+            <img
+              src="https://realestatemarket.com.mx/images/2024/01-enero/29/Las_20_mejores_ciudades_del_mundo_en_2024.jpg"
+              style="width: 100%; height: 200px; object-fit: cover"
+              alt="post image"
+            />
+          </div>
+          <div class="col-4">
+            <img
+              src="https://selecciones.com.mx/wp-content/uploads/2022/09/estas-son-las-ciudad-con-mas-poblacion-del-mundo.jpg"
+              style="width: 100%; height: 200px; object-fit: cover"
+              alt="post image"
+            />
+          </div>
+          <div class="col-4">
+            <img
+              src="https://www.worldbank.org/content/dam/photos/780x439/2018/oct-3/BuenosAires780.jpg"
+              style="width: 100%; height: 200px; object-fit: cover"
+              alt="post image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
